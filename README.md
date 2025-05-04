@@ -19,10 +19,21 @@ curl localhost:8080/react-block-schedule
 curl localhost:8080/react-block-schedule-parallel
 20971520
 ```
+## Note!
+
+Resuls for Normal is not valid, after changing dependency from webflux -> web test fails.
+
+`System.out.println(Thread.currentThread().toString());`
+
+web
+Thread[#36,http-nio-8080-exec-1,5,main]
+
+webflux
+Thread[#37,reactor-http-epoll-2,5,main]
 
 ### Result:
 
-!! Resuls for Normal is not valid, after changing dependency from webflux -> web test fails.
+
 
 |                                    | Normal  | Virtual                     | Reactive | Reactive B | Reactive BS                     | Reactive BSP                     |
 |------------------------------------|---------|-----------------------------|----------|------------|---------------------------------|----------------------------------|

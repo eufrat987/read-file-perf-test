@@ -17,6 +17,7 @@ public class IOController {
 
     @GetMapping("/normal")
     public int normal() throws IOException {
+        System.out.println(Thread.currentThread().toString());
         return readFileBlocking();
     }
 
