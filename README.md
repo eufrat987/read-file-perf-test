@@ -22,6 +22,8 @@ curl localhost:8080/react-block-schedule-parallel
 
 ### Result:
 
+!! Resuls for Normal is not valid, after changing dependency from webflux -> web test fails.
+
 |                                    | Normal  | Virtual                     | Reactive | Reactive B | Reactive BS                     | Reactive BSP                     |
 |------------------------------------|---------|-----------------------------|----------|------------|---------------------------------|----------------------------------|
 | Requests per second (mean) [#/sec] | 179.79  | 179.54                      | 160.24   | 180.27     | 180.45                          | 177.42                           | 
