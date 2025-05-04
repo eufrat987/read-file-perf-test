@@ -2,9 +2,6 @@ package org.example;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.web.embedded.netty.NettyReactiveWebServerFactory;
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +20,11 @@ public class Main {
 
     @GetMapping("/read")
     public int read() throws IOException {
-        System.out.println(Thread.currentThread());
         return Files.readAllBytes(Path.of("myfile.bin")).length;
+    }
+
+    @GetMapping("/log")
+    public String log() {
+        return Thread.currentThread().toString();
     }
 }

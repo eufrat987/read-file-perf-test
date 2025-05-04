@@ -18,7 +18,11 @@ public class Main {
 
     @GetMapping("/read")
     public int read() throws IOException {
-        System.out.println(Thread.currentThread());
         return Files.readAllBytes(Path.of("myfile.bin")).length;
+    }
+
+    @GetMapping("/log")
+    public String log() {
+        return Thread.currentThread().toString();
     }
 }
