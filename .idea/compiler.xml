@@ -6,8 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="virtual-tomcat" />
+        <module name="virtual-netty" />
         <module name="normal-tomcat" />
+        <module name="normal-netty" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="read-file-perf-test" target="21" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -5,7 +5,16 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/normal-tomcat/pom.xml" />
+        <option value="$PROJECT_DIR$/normal-netty/pom.xml" />
+        <option value="$PROJECT_DIR$/virtual-tomcat/pom.xml" />
+        <option value="$PROJECT_DIR$/virtual-netty/pom.xml" />
+        <option value="$PROJECT_DIR$/../../read-file-perf-test/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../../read-file-perf-test/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="21" project-jdk-type="JavaSDK">
