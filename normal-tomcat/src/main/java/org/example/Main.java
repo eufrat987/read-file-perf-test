@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -21,8 +23,28 @@ public class Main {
         return Files.readAllBytes(Path.of("myfile.bin")).length;
     }
 
+    @GetMapping("/readBuf")
+    public int readBuf() throws IOException {
+        return readFileBytesStream("myfile.bin");
+    }
+
     @GetMapping("/log")
     public String log() {
         return Thread.currentThread().toString();
+    }
+
+    private int readFileBytesStream(String path) throws IOException {
+        File file = new File(path);
+        byte[] buffer = new byte[8192];
+        int totalBytes = 0;
+        int bytesRead;
+
+        try (FileInputStream inputStream = new FileInputStream(file)) {
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                totalBytes += bytesRead;
+            }
+        }
+
+        return totalBytes;
     }
 }

@@ -9,11 +9,14 @@
         <option value="$PROJECT_DIR$/virtual-tomcat/pom.xml" />
         <option value="$PROJECT_DIR$/virtual-netty/pom.xml" />
         <option value="$PROJECT_DIR$/../../read-file-perf-test/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../corutine/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/../../read-file-perf-test/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </set>
     </option>
   </component>

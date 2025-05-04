@@ -8,12 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="virtual-tomcat" />
         <module name="virtual-netty" />
+        <module name="corutine" />
         <module name="normal-tomcat" />
         <module name="normal-netty" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="read-file-perf-test" target="21" />
+      <module name="normal-tomcat (1)" target="21" />
+      <module name="normal-tomcat (2)" target="21" />
+      <module name="read-file-perf-test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
