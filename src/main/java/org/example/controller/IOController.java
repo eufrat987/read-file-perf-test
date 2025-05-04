@@ -3,8 +3,6 @@ package org.example.controller;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.core.io.buffer.DataBufferUtils;
 import org.springframework.core.io.buffer.DefaultDataBufferFactory;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
@@ -20,7 +18,7 @@ import java.util.concurrent.CompletionException;
 import java.util.concurrent.Executors;
 
 @RestController
-public class TestController {
+public class IOController {
 
     public static final String FILE_PATH = "myfile.bin";
 
